@@ -81,7 +81,7 @@ function App() {
           >
             <span
               style={{
-                textDecoration: taskItem.isCompleted ? "line-through" : "none",
+                textDecoration: taskItem.isCompleted ? "line-through rgb(140, 217, 126)" : "none",
               }}
             >
               {taskItem.name}
