@@ -1,0 +1,154 @@
+:root {
+  background-color: #191a1a;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.addTasks {
+  display: flex;
+  gap: 20px;
+}
+
+.addTasks input {
+  padding: 10px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+.addTasks input:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 5px #2196f3;
+}
+
+.addTasks button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green like input border */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.addTasks button:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 8px #4caf50;
+}
+
+.addTasks button:active {
+  transform: scale(0.98);
+}
+
+.taskList {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inside-taskList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px; /* Optional: to limit line stretching */
+  padding: 0 20px;
+}
+
+
+.taskList span {
+  color: #b0bec5;
+  font-weight: 700;
+  font-size: 29px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-grow: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+.complete-info,
+.remove-btn {
+  margin-left: 15px;
+}
+
+
+
+.complete-info {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.remove-btn {
+  width: 30px;
+  height: 25px;
+  border-radius: 5px; 
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #6c757d;
+  box-shadow: 0 0 8px #6c757d;
+  transition: 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inside-taskList {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.complete-info:active {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.fade-out {
+  animation: zoomOut 0.3s forwards;
+}
